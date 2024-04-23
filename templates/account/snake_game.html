@@ -1,0 +1,15 @@
+<!-- snake_game.html -->
+
+{% extends 'account/base.html' %}
+{% load static %} <!-- Add this line to load the static template tag library -->
+
+{% block content %}
+    <div class="text-center">
+        <h2>Snake Game</h2>
+        <canvas id="snake-canvas" width="400" height="400"></canvas>
+    </div>
+{% endblock %}
+
+{% block extra_js %}
+    <script src="{% static 'static/snake_game.js' %}"></script>
+{% endblock %}

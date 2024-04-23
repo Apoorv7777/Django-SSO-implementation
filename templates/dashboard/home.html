@@ -1,0 +1,22 @@
+{% extends 'account/base.html' %}
+{% load socialaccount %}
+{% load static %}
+
+{% block content %}
+<div class="text-center">
+    <h2>Home</h2>
+    <p>Hello {{ user.first_name }}!</p>
+    <p>Your Username: {{ user }}</p>
+    <a href="{% url 'snake_game' %}">
+        <img src="{% static 'images/snake.webp' %}" alt="Snake Game" class="img-fluid">
+    </a><br><br>
+    <a href="{% url 'snake_game' %}" class="btn btn-dark">Play Snake Game</a>
+    <div>
+        <a class="btn btn-dark mt-3" href="{% url 'socialaccount_connections' %}">Settings</a>
+    </div>
+</div>
+{% endblock %} 
+
+
+
+
